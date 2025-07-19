@@ -44,13 +44,18 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.dgvArticulos = new System.Windows.Forms.DataGridView();
+            this.pbxArticulos = new System.Windows.Forms.PictureBox();
             this.barraTitulo.SuspendLayout();
+            this.panelContenedor.SuspendLayout();
             this.menuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxArticulos)).BeginInit();
             this.SuspendLayout();
             // 
             // barraTitulo
@@ -69,7 +74,9 @@
             // 
             // panelContenedor
             // 
-            this.panelContenedor.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panelContenedor.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panelContenedor.Controls.Add(this.pbxArticulos);
+            this.panelContenedor.Controls.Add(this.dgvArticulos);
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContenedor.Location = new System.Drawing.Point(0, 35);
             this.panelContenedor.Name = "panelContenedor";
@@ -241,6 +248,22 @@
             this.panel4.Size = new System.Drawing.Size(10, 44);
             this.panel4.TabIndex = 3;
             // 
+            // dgvArticulos
+            // 
+            this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvArticulos.Location = new System.Drawing.Point(226, 69);
+            this.dgvArticulos.Name = "dgvArticulos";
+            this.dgvArticulos.Size = new System.Drawing.Size(753, 460);
+            this.dgvArticulos.TabIndex = 0;
+            // 
+            // pbxArticulos
+            // 
+            this.pbxArticulos.Location = new System.Drawing.Point(986, 69);
+            this.pbxArticulos.Name = "pbxArticulos";
+            this.pbxArticulos.Size = new System.Drawing.Size(302, 304);
+            this.pbxArticulos.TabIndex = 1;
+            this.pbxArticulos.TabStop = false;
+            // 
             // pantallaInicial
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -254,12 +277,15 @@
             this.Text = "Pantalla inicial";
             this.Load += new System.EventHandler(this.pantallaInicial_Load);
             this.barraTitulo.ResumeLayout(false);
+            this.panelContenedor.ResumeLayout(false);
             this.menuVertical.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxArticulos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -282,6 +308,8 @@
         private System.Windows.Forms.Button btnDetalles;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnModificar;
+        private System.Windows.Forms.PictureBox pbxArticulos;
+        private System.Windows.Forms.DataGridView dgvArticulos;
     }
 }
 
