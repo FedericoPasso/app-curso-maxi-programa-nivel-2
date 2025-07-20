@@ -29,33 +29,33 @@
         private void InitializeComponent()
         {
             this.barraTitulo = new System.Windows.Forms.Panel();
-            this.panelContenedor = new System.Windows.Forms.Panel();
-            this.menuVertical = new System.Windows.Forms.Panel();
-            this.pbxLogo = new System.Windows.Forms.PictureBox();
             this.btnRestaurar = new System.Windows.Forms.PictureBox();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
-            this.btnAgregar = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.btnModificar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnDetalles = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.dgvArticulos = new System.Windows.Forms.DataGridView();
+            this.panelContenedor = new System.Windows.Forms.Panel();
             this.pbxArticulos = new System.Windows.Forms.PictureBox();
+            this.dgvArticulos = new System.Windows.Forms.DataGridView();
+            this.menuVertical = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnDetalles = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnModificar = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.pbxLogo = new System.Windows.Forms.PictureBox();
             this.barraTitulo.SuspendLayout();
-            this.panelContenedor.SuspendLayout();
-            this.menuVertical.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
+            this.panelContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxArticulos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
+            this.menuVertical.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // barraTitulo
@@ -71,45 +71,6 @@
             this.barraTitulo.Size = new System.Drawing.Size(1300, 35);
             this.barraTitulo.TabIndex = 0;
             this.barraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.barraTitulo_MouseDown);
-            // 
-            // panelContenedor
-            // 
-            this.panelContenedor.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.panelContenedor.Controls.Add(this.pbxArticulos);
-            this.panelContenedor.Controls.Add(this.dgvArticulos);
-            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenedor.Location = new System.Drawing.Point(0, 35);
-            this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1300, 615);
-            this.panelContenedor.TabIndex = 1;
-            // 
-            // menuVertical
-            // 
-            this.menuVertical.BackColor = System.Drawing.SystemColors.ControlText;
-            this.menuVertical.Controls.Add(this.panel4);
-            this.menuVertical.Controls.Add(this.panel3);
-            this.menuVertical.Controls.Add(this.panel2);
-            this.menuVertical.Controls.Add(this.btnDetalles);
-            this.menuVertical.Controls.Add(this.btnEliminar);
-            this.menuVertical.Controls.Add(this.btnModificar);
-            this.menuVertical.Controls.Add(this.panel1);
-            this.menuVertical.Controls.Add(this.btnAgregar);
-            this.menuVertical.Controls.Add(this.pbxLogo);
-            this.menuVertical.Dock = System.Windows.Forms.DockStyle.Left;
-            this.menuVertical.Location = new System.Drawing.Point(0, 35);
-            this.menuVertical.Name = "menuVertical";
-            this.menuVertical.Size = new System.Drawing.Size(220, 615);
-            this.menuVertical.TabIndex = 2;
-            // 
-            // pbxLogo
-            // 
-            this.pbxLogo.Image = global::presentacion.Properties.Resources.Imagen_de_WhatsApp_2025_07_18_a_las_13_41_29_6fd07273;
-            this.pbxLogo.Location = new System.Drawing.Point(0, 0);
-            this.pbxLogo.Name = "pbxLogo";
-            this.pbxLogo.Size = new System.Drawing.Size(220, 134);
-            this.pbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbxLogo.TabIndex = 0;
-            this.pbxLogo.TabStop = false;
             // 
             // btnRestaurar
             // 
@@ -160,55 +121,75 @@
             this.btnCerrar.TabStop = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
-            // btnAgregar
+            // panelContenedor
             // 
-            this.btnAgregar.FlatAppearance.BorderSize = 0;
-            this.btnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
-            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregar.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.ForeColor = System.Drawing.Color.White;
-            this.btnAgregar.Location = new System.Drawing.Point(0, 134);
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(220, 44);
-            this.btnAgregar.TabIndex = 1;
-            this.btnAgregar.Text = "AGREGAR";
-            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.panelContenedor.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panelContenedor.Controls.Add(this.pbxArticulos);
+            this.panelContenedor.Controls.Add(this.dgvArticulos);
+            this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelContenedor.Location = new System.Drawing.Point(0, 35);
+            this.panelContenedor.Name = "panelContenedor";
+            this.panelContenedor.Size = new System.Drawing.Size(1300, 615);
+            this.panelContenedor.TabIndex = 1;
             // 
-            // panel1
+            // pbxArticulos
             // 
-            this.panel1.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.panel1.Location = new System.Drawing.Point(0, 134);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(10, 44);
-            this.panel1.TabIndex = 2;
+            this.pbxArticulos.Location = new System.Drawing.Point(986, 69);
+            this.pbxArticulos.Name = "pbxArticulos";
+            this.pbxArticulos.Size = new System.Drawing.Size(302, 304);
+            this.pbxArticulos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxArticulos.TabIndex = 1;
+            this.pbxArticulos.TabStop = false;
             // 
-            // btnModificar
+            // dgvArticulos
             // 
-            this.btnModificar.FlatAppearance.BorderSize = 0;
-            this.btnModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
-            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.ForeColor = System.Drawing.Color.White;
-            this.btnModificar.Location = new System.Drawing.Point(0, 184);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(220, 44);
-            this.btnModificar.TabIndex = 3;
-            this.btnModificar.Text = "MODIFICAR";
-            this.btnModificar.UseVisualStyleBackColor = true;
+            this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvArticulos.Location = new System.Drawing.Point(226, 69);
+            this.dgvArticulos.Name = "dgvArticulos";
+            this.dgvArticulos.Size = new System.Drawing.Size(753, 460);
+            this.dgvArticulos.TabIndex = 0;
             // 
-            // btnEliminar
+            // menuVertical
             // 
-            this.btnEliminar.FlatAppearance.BorderSize = 0;
-            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(-3, 234);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(220, 44);
-            this.btnEliminar.TabIndex = 4;
-            this.btnEliminar.Text = "ELIMINAR";
-            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.menuVertical.BackColor = System.Drawing.SystemColors.ControlText;
+            this.menuVertical.Controls.Add(this.panel4);
+            this.menuVertical.Controls.Add(this.panel3);
+            this.menuVertical.Controls.Add(this.panel2);
+            this.menuVertical.Controls.Add(this.btnDetalles);
+            this.menuVertical.Controls.Add(this.btnEliminar);
+            this.menuVertical.Controls.Add(this.btnModificar);
+            this.menuVertical.Controls.Add(this.panel1);
+            this.menuVertical.Controls.Add(this.btnAgregar);
+            this.menuVertical.Controls.Add(this.pbxLogo);
+            this.menuVertical.Dock = System.Windows.Forms.DockStyle.Left;
+            this.menuVertical.Location = new System.Drawing.Point(0, 35);
+            this.menuVertical.Name = "menuVertical";
+            this.menuVertical.Size = new System.Drawing.Size(220, 615);
+            this.menuVertical.TabIndex = 2;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.panel4.Location = new System.Drawing.Point(0, 284);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(10, 44);
+            this.panel4.TabIndex = 3;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.panel3.Location = new System.Drawing.Point(0, 235);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(10, 44);
+            this.panel3.TabIndex = 3;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.panel2.Location = new System.Drawing.Point(0, 184);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(10, 44);
+            this.panel2.TabIndex = 3;
             // 
             // btnDetalles
             // 
@@ -224,46 +205,65 @@
             this.btnDetalles.Text = "DETALLES";
             this.btnDetalles.UseVisualStyleBackColor = true;
             // 
-            // panel2
+            // btnEliminar
             // 
-            this.panel2.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.panel2.Location = new System.Drawing.Point(0, 184);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(10, 44);
-            this.panel2.TabIndex = 3;
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.Location = new System.Drawing.Point(-3, 234);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(220, 44);
+            this.btnEliminar.TabIndex = 4;
+            this.btnEliminar.Text = "ELIMINAR";
+            this.btnEliminar.UseVisualStyleBackColor = true;
             // 
-            // panel3
+            // btnModificar
             // 
-            this.panel3.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.panel3.Location = new System.Drawing.Point(0, 235);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(10, 44);
-            this.panel3.TabIndex = 3;
+            this.btnModificar.FlatAppearance.BorderSize = 0;
+            this.btnModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.ForeColor = System.Drawing.Color.White;
+            this.btnModificar.Location = new System.Drawing.Point(0, 184);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(220, 44);
+            this.btnModificar.TabIndex = 3;
+            this.btnModificar.Text = "MODIFICAR";
+            this.btnModificar.UseVisualStyleBackColor = true;
             // 
-            // panel4
+            // panel1
             // 
-            this.panel4.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.panel4.Location = new System.Drawing.Point(0, 284);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(10, 44);
-            this.panel4.TabIndex = 3;
+            this.panel1.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.panel1.Location = new System.Drawing.Point(0, 134);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(10, 44);
+            this.panel1.TabIndex = 2;
             // 
-            // dgvArticulos
+            // btnAgregar
             // 
-            this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvArticulos.Location = new System.Drawing.Point(226, 69);
-            this.dgvArticulos.Name = "dgvArticulos";
-            this.dgvArticulos.Size = new System.Drawing.Size(753, 460);
-            this.dgvArticulos.TabIndex = 0;
+            this.btnAgregar.FlatAppearance.BorderSize = 0;
+            this.btnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkSlateGray;
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.Font = new System.Drawing.Font("Unispace", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.ForeColor = System.Drawing.Color.White;
+            this.btnAgregar.Location = new System.Drawing.Point(0, 134);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(220, 44);
+            this.btnAgregar.TabIndex = 1;
+            this.btnAgregar.Text = "AGREGAR";
+            this.btnAgregar.UseVisualStyleBackColor = true;
             // 
-            // pbxArticulos
+            // pbxLogo
             // 
-            this.pbxArticulos.Location = new System.Drawing.Point(986, 69);
-            this.pbxArticulos.Name = "pbxArticulos";
-            this.pbxArticulos.Size = new System.Drawing.Size(302, 304);
-            this.pbxArticulos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbxArticulos.TabIndex = 1;
-            this.pbxArticulos.TabStop = false;
+            this.pbxLogo.Image = global::presentacion.Properties.Resources.Imagen_de_WhatsApp_2025_07_18_a_las_13_41_29_6fd07273;
+            this.pbxLogo.Location = new System.Drawing.Point(0, 0);
+            this.pbxLogo.Name = "pbxLogo";
+            this.pbxLogo.Size = new System.Drawing.Size(220, 134);
+            this.pbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxLogo.TabIndex = 0;
+            this.pbxLogo.TabStop = false;
             // 
             // pantallaInicial
             // 
@@ -278,15 +278,15 @@
             this.Text = "Pantalla inicial";
             this.Load += new System.EventHandler(this.pantallaInicial_Load);
             this.barraTitulo.ResumeLayout(false);
-            this.panelContenedor.ResumeLayout(false);
-            this.menuVertical.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
+            this.panelContenedor.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbxArticulos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
+            this.menuVertical.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
             this.ResumeLayout(false);
 
         }

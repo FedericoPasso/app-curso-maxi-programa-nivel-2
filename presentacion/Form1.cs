@@ -22,7 +22,8 @@ namespace presentacion
 
         private void pantallaInicial_Load(object sender, EventArgs e)
         {
-
+            ArticuloNegocio articulo = new ArticuloNegocio();
+            dgvArticulos.DataSource = articulo.listar();
         }
 
         //dandole funcionalidad a los nuevos botones 
