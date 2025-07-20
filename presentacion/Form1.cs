@@ -15,6 +15,7 @@ namespace presentacion
 {
     public partial class pantallaInicial : Form
     {
+        private List<Articulos> listaArticulos;
         public pantallaInicial()
         {
             InitializeComponent();
@@ -23,8 +24,33 @@ namespace presentacion
         private void pantallaInicial_Load(object sender, EventArgs e)
         {
             ArticuloNegocio articulo = new ArticuloNegocio();
-            dgvArticulos.DataSource = articulo.listar();
+            listaArticulos = articulo.listar();
+            dgvArticulos.DataSource = listaArticulos;
+            cargarImagen(listaArticulos[0].ImagenUrl);
+            
         }
+
+        private void dgvArticulos_SelectionChanged(object sender, EventArgs e) //metodo para que cambie la foto del picturebox cada vez que se selecciona una fila del data grid view
+        {
+            Articulos seleccionado = (Articulos)dgvArticulos.CurrentRow.DataBoundItem;
+            cargarImagen(seleccionado.ImagenUrl);
+        }
+
+        private void cargarImagen(string imagen) //metodo si en caso de que la imagen sea null en la db 
+        {
+            try
+            {
+
+                pbxArticulos.Load(imagen);
+            }
+            catch (Exception ex)
+            {
+
+                pbxArticulos.Load("https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png");
+            }
+        }
+
+
 
         //dandole funcionalidad a los nuevos botones 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -63,5 +89,6 @@ namespace presentacion
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
     }
 }

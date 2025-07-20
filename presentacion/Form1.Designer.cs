@@ -134,6 +134,7 @@
             // 
             // pbxArticulos
             // 
+            this.pbxArticulos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pbxArticulos.Location = new System.Drawing.Point(986, 69);
             this.pbxArticulos.Name = "pbxArticulos";
             this.pbxArticulos.Size = new System.Drawing.Size(302, 304);
@@ -143,11 +144,14 @@
             // 
             // dgvArticulos
             // 
+            this.dgvArticulos.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvArticulos.Location = new System.Drawing.Point(226, 69);
             this.dgvArticulos.Name = "dgvArticulos";
             this.dgvArticulos.Size = new System.Drawing.Size(753, 460);
             this.dgvArticulos.TabIndex = 0;
+            this.dgvArticulos.SelectionChanged += new System.EventHandler(this.dgvArticulos_SelectionChanged);
             // 
             // menuVertical
             // 
