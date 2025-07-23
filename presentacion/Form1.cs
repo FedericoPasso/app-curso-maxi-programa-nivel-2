@@ -23,33 +23,9 @@ namespace presentacion
 
         private void pantallaInicial_Load(object sender, EventArgs e)
         {
-            ArticuloNegocio articulo = new ArticuloNegocio();
-            listaArticulos = articulo.listar();
-            dgvArticulos.DataSource = listaArticulos;
-            cargarImagen(listaArticulos[0].ImagenUrl);
-            
+
+            btnInicio_Click(null, e);
         }
-
-        private void dgvArticulos_SelectionChanged(object sender, EventArgs e) //metodo para que cambie la foto del picturebox cada vez que se selecciona una fila del data grid view
-        {
-            Articulos seleccionado = (Articulos)dgvArticulos.CurrentRow.DataBoundItem;
-            cargarImagen(seleccionado.ImagenUrl);
-        }
-
-        private void cargarImagen(string imagen) //metodo si en caso de que la imagen sea null en la db 
-        {
-            try
-            {
-
-                pbxArticulos.Load(imagen);
-            }
-            catch (Exception ex)
-            {
-
-                pbxArticulos.Load("https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png");
-            }
-        }
-
 
 
         //dandole funcionalidad a los nuevos botones 
@@ -90,5 +66,38 @@ namespace presentacion
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
+        //metodo para que se abra la ventana de agregar articulos en el panel del form principal
+        private void AbrirFormHija(object FrmHija)
+        {
+            if (this.panelContenedor.Controls.Count > 0)
+            {
+                this.panelContenedor.Controls.RemoveAt(0);
+            }
+            Form FormAgregar = FrmHija as Form;
+            FormAgregar.TopLevel = false;
+            FormAgregar.Dock = DockStyle.Fill;
+            this.panelContenedor.Controls.Add(FormAgregar);
+            this.panelContenedor.Tag = FormAgregar;
+            FormAgregar.Show();
+
+            
+        }
+
+        //dandole funcionalidad a los botones del menu vertical
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            AbrirFormHija(new FrmAltaArticulos()); 
+            
+        }
+
+        private void btnInicio_Click(object sender, EventArgs e)
+        {
+            AbrirFormHija(new FrmInicio());
+        }
+
+        private void btnArticulos_Click(object sender, EventArgs e)
+        {
+            AbrirFormHija(new FrmArticulos());
+        }
     }
 }
