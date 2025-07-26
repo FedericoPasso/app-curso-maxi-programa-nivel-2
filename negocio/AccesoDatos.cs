@@ -50,7 +50,7 @@ namespace negocio
             }
         }
     
-        public void ejevutarAccion()
+        public void ejecutarAccion()
         {
             comando.Connection = Conexion;
             try
