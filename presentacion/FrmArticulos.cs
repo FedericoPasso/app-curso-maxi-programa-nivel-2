@@ -17,6 +17,7 @@ namespace presentacion
 {
     public partial class FrmArticulos : Form
     {
+        private pantallaInicial panel;
         private List<Articulos> listaArticulos;
         public FrmArticulos()
         {
@@ -70,6 +71,25 @@ namespace presentacion
             }
         }
 
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            FrmAltaArticulos agregar = new FrmAltaArticulos();
+            agregar.ShowDialog();
+            cargar();
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            Articulos seleccionado;
+            seleccionado = (Articulos)dgvArticulos.CurrentRow.DataBoundItem;
+            
+        
+            FrmAltaArticulos modificar = new FrmAltaArticulos(seleccionado);
+            modificar.ShowDialog();
+            cargar();
+        }
+       
+        
         private void dgvArticulos_CellClick(object sender, DataGridViewCellEventArgs e)//el anterior metodo para cargar imagenes dejó de funcionar asi que usé este
         {
             if (e.RowIndex >= 0)

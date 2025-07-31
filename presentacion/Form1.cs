@@ -15,7 +15,10 @@ namespace presentacion
 {
     public partial class pantallaInicial : Form
     {
+        //private FrmAltaArticulos frmArticulos;
         private List<Articulos> listaArticulos;
+        private object dgvArticulos;
+
         public pantallaInicial()
         {
             InitializeComponent();
@@ -66,7 +69,7 @@ namespace presentacion
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        //metodo para que se abra la ventana de agregar articulos en el panel del form principal
+        //metodo para que se abra otra ventana en el panel contenedor
         private void AbrirFormHija(object FrmHija)
         {
             if (this.panelContenedor.Controls.Count > 0)
@@ -84,13 +87,7 @@ namespace presentacion
         }
 
         //dandole funcionalidad a los botones del menu vertical
-        private void btnAgregar_Click(object sender, EventArgs e)
-        {
-            AbrirFormHija(new FrmAltaArticulos());
-            
-            
-        }
-
+        
         private void btnInicio_Click(object sender, EventArgs e)
         {
             AbrirFormHija(new FrmInicio());
@@ -100,5 +97,7 @@ namespace presentacion
         {
             AbrirFormHija(new FrmArticulos());
         }
+
+        
     }
 }

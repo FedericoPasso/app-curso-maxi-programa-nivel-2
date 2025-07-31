@@ -85,6 +85,51 @@ namespace negocio
                 throw;
             }
         }
+        public void modificar (Articulos art)
+        {
+            AccesoDatos datos = new AccesoDatos ();
+            try
+            {
+                datos.setearConsulta("Update ARTICULOS Set Codigo = @Codigo ,Nombre = @Nombre, Descripcion = @Descripcion, IdMarca = @IdMarca, IdCategoria = @IdCategoria, ImagenUrl = @Imagen, Precio = @Precio Where Id = @Id");
+                datos.setearParametro("@Codigo", art.Codigo);
+                datos.setearParametro("@Nombre", art.Nombre);
+                datos.setearParametro("@Descripcion", art.Descripcion);
+                datos.setearParametro("@Imagen", art.ImagenUrl);
+                datos.setearParametro("@idMarca", art.IdMarca.Id);
+                datos.setearParametro("@IdCategoria", art.IdCategoria.Id);
+                datos.setearParametro("@Precio", art.Precio);
+                datos.setearParametro("@Id", art.Id);
+
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex; 
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+        public void eliminar(int id)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.setearConsulta("Delete From ARTICULOS Where Id = @Id");
+                datos.setearParametro("@Id", id);
+
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            } 
+        }
+        
+    
     
     }
 }
