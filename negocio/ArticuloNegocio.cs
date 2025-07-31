@@ -36,7 +36,7 @@ namespace negocio
                     aux.Nombre = (string)lector["Nombre"];
                     aux.Descripcion = (string)lector["Descripcion"];
 
-                    if (!(lector["Imagen"] is DBNull))
+                    if (!(lector["Imagen"] is DBNull))//condicion en caso que la imagen sea nula en la db
                         aux.ImagenUrl = (string)lector["Imagen"];
                     
                     aux.IdMarca = new Marcas(); //se crea un objeto de la clase marcas para poder usarlo en la consulta 

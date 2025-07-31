@@ -29,6 +29,7 @@ namespace presentacion
         {
             Articulos nuevo = new Articulos();
             ArticuloNegocio negocio = new ArticuloNegocio();
+            
             try
             {
                 nuevo.Id = int.Parse(txtId.Text);
@@ -37,6 +38,8 @@ namespace presentacion
                 nuevo.Descripcion = txtDescripcion.Text;
                 nuevo.ImagenUrl = txtImagen.Text;
                 nuevo.Precio = float.Parse(txtPrecio.Text);
+                nuevo.IdMarca = (Marcas)cboMarca.SelectedItem;
+                nuevo.IdCategoria = (Categorias)cboCategoria.SelectedItem;
 
                 negocio.agregar(nuevo);
                 MessageBox.Show("Agregado exitosamente");
@@ -47,6 +50,22 @@ namespace presentacion
                 MessageBox.Show(ex.ToString());
             }
 
+        }
+
+        private void FrmAltaArticulos_Load(object sender, EventArgs e)
+        {
+            CategoriaNegocio categoria = new CategoriaNegocio();
+            MarcaNegocio marca = new MarcaNegocio();
+            try
+            {
+                cboCategoria.DataSource = categoria.listar();
+                cboMarca.DataSource = marca.listar();
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
         }
     }
 }

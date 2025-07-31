@@ -86,7 +86,8 @@ namespace presentacion
         //dandole funcionalidad a los botones del menu vertical
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            AbrirFormHija(new FrmAltaArticulos()); 
+            AbrirFormHija(new FrmAltaArticulos());
+            
             
         }
 
