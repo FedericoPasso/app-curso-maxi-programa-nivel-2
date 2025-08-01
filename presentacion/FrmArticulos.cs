@@ -61,7 +61,7 @@ namespace presentacion
 
                 listaArticulos = articulo.listar();
                 dgvArticulos.DataSource = listaArticulos;
-                dgvArticulos.Columns["imagenUrl"].Visible = false;
+                ocultarColumnas();
                 cargarImagen(listaArticulos[0].ImagenUrl);
             }
             catch (Exception ex)
@@ -69,6 +69,11 @@ namespace presentacion
 
                 throw ex;
             }
+        }
+
+        private void ocultarColumnas()
+        {
+            dgvArticulos.Columns["imagenUrl"].Visible = false;
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
@@ -108,6 +113,22 @@ namespace presentacion
 
                 MessageBox.Show(ex.ToString());
             }
+        }
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            List<Articulos> listaFiltrada;
+            string filtro = txtFiltrar.Text;
+            if(filtro != "")
+            {
+                listaFiltrada = listaArticulos.FindAll(x => x.Nombre.ToUpper().Contains(filtro.ToUpper()) || x.IdMarca.Descripcion.ToUpper().Contains(filtro.ToUpper()));//ciclo que funciona como un foreach para almacenar los datos filtrados
+            }
+            else
+            {
+                listaFiltrada = listaArticulos;
+            }
+            dgvArticulos.DataSource = null;
+            dgvArticulos.DataSource = listaFiltrada;
+            ocultarColumnas();
         }
       
         //METODO PARA USAR ELIMINACION FISICA O LOGICA
