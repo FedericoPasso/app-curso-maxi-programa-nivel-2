@@ -129,6 +129,24 @@ namespace negocio
             } 
         }
         
+
+        //ELIMINADOR LOGICO PARA NO  BORRAR DE FORMA PERMANENTE LOS DATOS DE LA DB
+        //public void eliminarLogico(int id)
+        //{
+        //    AccesoDatos datos = new AccesoDatos();
+        //    try
+        //    {
+        //        datos.setearConsulta("update ARTICULOS set Activo = 0 where id = @Id");
+        //        datos.setearParametro("@Id",id);
+        //
+        //        datos.ejecutarAccion();
+        //    }
+        //    catch (Exception)
+        //    {
+        //
+        //        throw;
+        //    }
+        //}
     
     
     }

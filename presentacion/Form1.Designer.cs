@@ -159,6 +159,7 @@
             // 
             // btnInicio
             // 
+            this.btnInicio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnInicio.Image = global::presentacion.Properties.Resources.Imagen_de_WhatsApp_2025_07_18_a_las_13_41_29_6fd07273;
             this.btnInicio.Location = new System.Drawing.Point(0, 0);
             this.btnInicio.Name = "btnInicio";

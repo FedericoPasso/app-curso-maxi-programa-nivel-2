@@ -89,8 +89,55 @@ namespace presentacion
             cargar();
         }
        
-        
-        private void dgvArticulos_CellClick(object sender, DataGridViewCellEventArgs e)//el anterior metodo para cargar imagenes dejó de funcionar asi que usé este
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            ArticuloNegocio articulo = new ArticuloNegocio();
+            Articulos seleccionado;
+            try
+            {
+                DialogResult respuesta = MessageBox.Show("¿Desea eliminar el articulo?", "Eliminar Articulo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);//sobrecarga del messageBox para verificar la accion del boton
+                if (respuesta == DialogResult.Yes)
+                {
+                    seleccionado = (Articulos)dgvArticulos.CurrentRow.DataBoundItem;
+                    articulo.eliminar(seleccionado.Id);
+                    cargar();
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+        }
+      
+        //METODO PARA USAR ELIMINACION FISICA O LOGICA
+        //private void eliminar(bool logico = false)
+        //{
+        //    ArticuloNegocio articulo = new ArticuloNegocio();
+        //    Articulos seleccionado;
+        //
+        //    try
+        //    {
+        //        DialogResult respuesta = MessageBox.Show("¿Desea eliminar el articulo?", "Eliminar Articulo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);//sobrecarga del messageBox para verificar la accion del boton
+        //        if (respuesta == DialogResult.Yes)
+        //        {
+        //            seleccionado = (Articulos)dgvArticulos.CurrentRow.DataBoundItem;
+        //            if (logico)
+        //                articulo.eliminar(seleccionado.Id);
+        //            else
+        //            {
+        //                articulo.eliminarLogico(seleccionado.Id);
+        //            }
+        //                cargar();
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //
+        //        MessageBox.Show(ex.ToString());
+        //    }
+        //}
+        private void dgvArticulos_CellClick(object sender, DataGridViewCellEventArgs e)//el anterior metodo para cambiar imagenes dejó de funcionar asi que usé este
         {
             if (e.RowIndex >= 0)
             {

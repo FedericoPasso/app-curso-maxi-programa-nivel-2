@@ -220,6 +220,7 @@
             // 
             // cboMarca
             // 
+            this.cboMarca.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cboMarca.FormattingEnabled = true;
             this.cboMarca.Location = new System.Drawing.Point(251, 275);
             this.cboMarca.Name = "cboMarca";
@@ -228,6 +229,7 @@
             // 
             // cboCategoria
             // 
+            this.cboCategoria.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cboCategoria.FormattingEnabled = true;
             this.cboCategoria.Location = new System.Drawing.Point(251, 302);
             this.cboCategoria.Name = "cboCategoria";
@@ -247,6 +249,7 @@
             // 
             this.barraTitulo.BackColor = System.Drawing.Color.DarkSlateGray;
             this.barraTitulo.Controls.Add(this.lblEdit);
+            this.barraTitulo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.barraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.barraTitulo.Location = new System.Drawing.Point(0, 0);
             this.barraTitulo.Name = "barraTitulo";
