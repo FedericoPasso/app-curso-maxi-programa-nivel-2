@@ -114,11 +114,28 @@ namespace presentacion
                 MessageBox.Show(ex.ToString());
             }
         }
-        private void btnBuscar_Click(object sender, EventArgs e)
+       // private void btnBuscar_Click(object sender, EventArgs e)
+       // {
+       //     List<Articulos> listaFiltrada;
+       //     string filtro = txtFiltrar.Text;
+       //     if(filtro != "")
+       //     {
+       //         listaFiltrada = listaArticulos.FindAll(x => x.Nombre.ToUpper().Contains(filtro.ToUpper()) || x.IdMarca.Descripcion.ToUpper().Contains(filtro.ToUpper()));//ciclo que funciona como un foreach para almacenar los datos filtrados
+       //     }
+       //     else
+       //     {
+       //         listaFiltrada = listaArticulos;
+       //     }
+       //     dgvArticulos.DataSource = null;
+       //     dgvArticulos.DataSource = listaFiltrada;
+       //     ocultarColumnas();
+       // }
+       
+        private void txtFiltrar_TextChanged(object sender, EventArgs e)
         {
             List<Articulos> listaFiltrada;
             string filtro = txtFiltrar.Text;
-            if(filtro != "")
+            if (filtro.Length >= 3)
             {
                 listaFiltrada = listaArticulos.FindAll(x => x.Nombre.ToUpper().Contains(filtro.ToUpper()) || x.IdMarca.Descripcion.ToUpper().Contains(filtro.ToUpper()));//ciclo que funciona como un foreach para almacenar los datos filtrados
             }
@@ -130,7 +147,7 @@ namespace presentacion
             dgvArticulos.DataSource = listaFiltrada;
             ocultarColumnas();
         }
-      
+
         //METODO PARA USAR ELIMINACION FISICA O LOGICA
         //private void eliminar(bool logico = false)
         //{
