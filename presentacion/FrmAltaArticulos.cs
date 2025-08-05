@@ -59,9 +59,12 @@ namespace presentacion
                     negocio.modificar(articulos);
                     MessageBox.Show("Modificado exitosamente");
 
+                }else
+                {
+                    negocio.agregar(articulos);
+                    MessageBox.Show("Agregado exitosamente");
+
                 }
-                negocio.agregar(articulos);
-                MessageBox.Show("Agregado exitosamente");
 
 
                 Close();

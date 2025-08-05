@@ -57,7 +57,7 @@
             this.barraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.barraTitulo.Location = new System.Drawing.Point(0, 0);
             this.barraTitulo.Name = "barraTitulo";
-            this.barraTitulo.Size = new System.Drawing.Size(1300, 35);
+            this.barraTitulo.Size = new System.Drawing.Size(1330, 35);
             this.barraTitulo.TabIndex = 0;
             this.barraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.barraTitulo_MouseDown);
             // 
@@ -65,7 +65,7 @@
             // 
             this.btnRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRestaurar.Image = global::presentacion.Properties.Resources.res;
-            this.btnRestaurar.Location = new System.Drawing.Point(1239, 3);
+            this.btnRestaurar.Location = new System.Drawing.Point(1269, 3);
             this.btnRestaurar.Name = "btnRestaurar";
             this.btnRestaurar.Size = new System.Drawing.Size(25, 25);
             this.btnRestaurar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -78,7 +78,7 @@
             // 
             this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMinimizar.Image = global::presentacion.Properties.Resources.minimazar;
-            this.btnMinimizar.Location = new System.Drawing.Point(1208, 3);
+            this.btnMinimizar.Location = new System.Drawing.Point(1238, 3);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(25, 25);
             this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -90,7 +90,7 @@
             // 
             this.btnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMaximizar.Image = global::presentacion.Properties.Resources.maxi;
-            this.btnMaximizar.Location = new System.Drawing.Point(1239, 3);
+            this.btnMaximizar.Location = new System.Drawing.Point(1269, 3);
             this.btnMaximizar.Name = "btnMaximizar";
             this.btnMaximizar.Size = new System.Drawing.Size(25, 25);
             this.btnMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -102,7 +102,7 @@
             // 
             this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCerrar.Image = global::presentacion.Properties.Resources.cerrar;
-            this.btnCerrar.Location = new System.Drawing.Point(1270, 3);
+            this.btnCerrar.Location = new System.Drawing.Point(1300, 3);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(25, 25);
             this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -118,7 +118,7 @@
             this.panelContenedor.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.panelContenedor.Location = new System.Drawing.Point(214, 34);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1086, 616);
+            this.panelContenedor.Size = new System.Drawing.Size(1116, 666);
             this.panelContenedor.TabIndex = 1;
             // 
             // menuVertical
@@ -130,7 +130,7 @@
             this.menuVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.menuVertical.Location = new System.Drawing.Point(0, 35);
             this.menuVertical.Name = "menuVertical";
-            this.menuVertical.Size = new System.Drawing.Size(220, 615);
+            this.menuVertical.Size = new System.Drawing.Size(220, 665);
             this.menuVertical.TabIndex = 2;
             // 
             // panel5
@@ -173,7 +173,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1300, 650);
+            this.ClientSize = new System.Drawing.Size(1330, 700);
             this.Controls.Add(this.menuVertical);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.barraTitulo);

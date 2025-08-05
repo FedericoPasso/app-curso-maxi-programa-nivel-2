@@ -34,6 +34,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = global::presentacion.Properties.Resources.Imagen_de_WhatsApp_2025_07_18_a_las_13_41_19_e18133a0;
             this.pictureBox1.Location = new System.Drawing.Point(287, 77);
             this.pictureBox1.Name = "pictureBox1";
@@ -41,7 +42,7 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // Inicio
+            // FrmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -49,7 +50,7 @@
             this.ClientSize = new System.Drawing.Size(1086, 616);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Inicio";
+            this.Name = "FrmInicio";
             this.Text = "Inicio";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

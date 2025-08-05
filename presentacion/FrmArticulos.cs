@@ -27,7 +27,34 @@ namespace presentacion
         private void FrmArticulos_Load(object sender, EventArgs e)
         {
             cargar();
+
+            cboCampo.Items.Add("Id");
+            cboCampo.Items.Add("Nombre");
+            cboCampo.Items.Add("Marca");
+            cboCampo.Items.Add("Categoria");
         }
+        private void cboCampo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string opcion = cboCampo.SelectedItem.ToString();
+            if (opcion == "Id")
+            {
+                cboCriterio.Items.Clear();
+                cboCriterio.Items.Add("Mayor a");
+                cboCriterio.Items.Add("Menor a");
+                cboCriterio.Items.Add("Igual a");
+            }
+            else 
+            {
+                cboCriterio.Items.Clear();
+                cboCriterio.Items.Add("Empieza con");
+                cboCriterio.Items.Add("Termina con");
+                cboCriterio.Items.Add("Contiene");
+                
+            }
+         
+        }
+
+
 
         // private void dgvArticulos_SelectionChanged(object sender, EventArgs e) //metodo para que cambie la foto del picturebox cada vez que se selecciona una fila del data grid view
         // {
@@ -114,22 +141,7 @@ namespace presentacion
                 MessageBox.Show(ex.ToString());
             }
         }
-       // private void btnBuscar_Click(object sender, EventArgs e)
-       // {
-       //     List<Articulos> listaFiltrada;
-       //     string filtro = txtFiltrar.Text;
-       //     if(filtro != "")
-       //     {
-       //         listaFiltrada = listaArticulos.FindAll(x => x.Nombre.ToUpper().Contains(filtro.ToUpper()) || x.IdMarca.Descripcion.ToUpper().Contains(filtro.ToUpper()));//ciclo que funciona como un foreach para almacenar los datos filtrados
-       //     }
-       //     else
-       //     {
-       //         listaFiltrada = listaArticulos;
-       //     }
-       //     dgvArticulos.DataSource = null;
-       //     dgvArticulos.DataSource = listaFiltrada;
-       //     ocultarColumnas();
-       // }
+        
        
         private void txtFiltrar_TextChanged(object sender, EventArgs e)
         {
@@ -208,5 +220,25 @@ namespace presentacion
             }
         }
 
+        private void btnBuscar_Click_1(object sender, EventArgs e)
+        {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            try
+            {
+                string campo = cboCampo.SelectedItem.ToString();
+                string criterio = cboCriterio.SelectedItem.ToString();  
+                string filtro = txtFiltroAvanzado.Text;
+                dgvArticulos.DataSource = negocio.filtrar(campo, criterio, filtro);
+
+            }
+            catch ( Exception ex)
+            {
+                //if (cboCampo == "Id")
+                //{
+                //
+                //}
+                MessageBox.Show("Por favor complete todos los campos");
+            }
+        }
     }    
 }

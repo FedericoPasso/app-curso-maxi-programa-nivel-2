@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Net;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
@@ -128,7 +129,111 @@ namespace negocio
                 throw ex;
             } 
         }
-        
+
+        public List<Articulos> filtrar(string campo, string criterio, string filtro)
+        {
+            List<Articulos> lista = new List<Articulos>();
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                string consulta = "Select A.Id, Codigo as CodArticulo, Nombre, A.Descripcion, M.Descripcion as Marca, C.Descripcion as Categoria, ImagenUrl as Imagen, Precio, IdMarca, IdCategoria From ARTICULOS A, CATEGORIAS C, MARCAS M Where C.Id = A.IdCategoria And M.Id = A.IdMarca And ";
+                if(campo == "Id")
+                {
+                    
+                    switch (criterio)
+                    {
+                        case "Mayor a":
+                            consulta += "A.Id > " + filtro;
+                            break;
+                        case "Menor a":
+                            consulta += "A.Id < " + filtro;
+                            break;
+                        default:
+                            consulta += "A.Id = " + filtro;
+                            break;
+                    }
+                }
+                else if (campo == "Nombre")
+                {
+                    switch (criterio)
+                    {
+                        case "Empieza con":
+                            consulta += "Nombre like'"+filtro+"%'";
+                            break;
+                        case "Termina con":
+                            consulta += "Nombre like'%"+filtro+"'";
+                            break;
+                        default:
+                            consulta += "Nombre like '%"+filtro+"%'";
+                            break;
+                    }
+                }              
+                else if(campo == "Marca")
+                {
+                    switch (criterio)
+                    {
+                        case "Empieza con":
+                            consulta += "M.Descripcion like'"+filtro+"%'";
+                            break;
+                        case "Termina con":
+                            consulta += "M.Descripcion like '%"+filtro+"'";
+                            break;
+                        case "Contiene":
+                            consulta += "M.Descripcion like '%"+filtro+"%'";
+                            break;
+                    }
+                }
+                else if(campo == "Categoria")
+                {
+                    switch (criterio)
+                    {
+                        case "Empieza con":
+                            consulta += "C.Descripcion like '"+filtro+"%'";
+                            break;
+                        case "Termina con":
+                            consulta += "C.Descripcion like '%"+filtro+"'";
+                            break;
+                        case "Contiene":
+                            consulta += "C.Descripcion like'%"+filtro+"%'";
+                            break;
+                    }
+                }
+
+
+                datos.setearConsulta(consulta);
+                datos.ejecutarLectura();
+                while (datos.Lector.Read())//recorre linea por linea la tabla de la db
+                {
+                    Articulos aux = new Articulos();
+                    aux.Id = (int)datos.Lector["Id"];
+                    aux.Codigo = (string)datos.Lector["CodArticulo"]; //hace la consulta con el alias que le pusimos 
+                    aux.Nombre = (string)datos.Lector["Nombre"];
+                    aux.Descripcion = (string)datos.Lector["Descripcion"];
+
+                    if (!(datos.Lector["Imagen"] is DBNull))//condicion en caso que la imagen sea nula en la db
+                        aux.ImagenUrl = (string)datos.Lector["Imagen"];
+
+                    aux.IdMarca = new Marcas(); //se crea un objeto de la clase marcas para poder usarlo en la consulta 
+                    aux.IdMarca.Id = (int)datos.Lector["IdMarca"];
+                    aux.IdMarca.Descripcion = (string)datos.Lector["Marca"];
+
+                    aux.IdCategoria = new Categorias();
+                    aux.IdCategoria.Id = (int)datos.Lector["IdCategoria"];
+                    aux.IdCategoria.Descripcion = (string)datos.Lector["Categoria"];
+                    aux.Precio = (float)(decimal)datos.Lector["Precio"];
+
+                    lista.Add(aux);
+                }
+                return lista;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }   
+            
+        }
+
 
         //ELIMINADOR LOGICO PARA NO  BORRAR DE FORMA PERMANENTE LOS DATOS DE LA DB
         //public void eliminarLogico(int id)
@@ -147,7 +252,7 @@ namespace negocio
         //        throw;
         //    }
         //}
-    
-    
+
+
     }
 }
