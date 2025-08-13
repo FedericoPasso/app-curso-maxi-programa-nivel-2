@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblId = new System.Windows.Forms.Label();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblDescripcion = new System.Windows.Forms.Label();
@@ -36,7 +35,6 @@
             this.lblPrecio = new System.Windows.Forms.Label();
             this.lblMarca = new System.Windows.Forms.Label();
             this.lblCategoria = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
@@ -53,23 +51,12 @@
             this.barraTitulo.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lblId
-            // 
-            this.lblId.AutoSize = true;
-            this.lblId.Font = new System.Drawing.Font("Unispace", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblId.ForeColor = System.Drawing.Color.Transparent;
-            this.lblId.Location = new System.Drawing.Point(207, 124);
-            this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(31, 15);
-            this.lblId.TabIndex = 0;
-            this.lblId.Text = "Id:";
-            // 
             // lblCodigo
             // 
             this.lblCodigo.AutoSize = true;
             this.lblCodigo.Font = new System.Drawing.Font("Unispace", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCodigo.ForeColor = System.Drawing.Color.Transparent;
-            this.lblCodigo.Location = new System.Drawing.Point(175, 147);
+            this.lblCodigo.Location = new System.Drawing.Point(149, 132);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(63, 15);
             this.lblCodigo.TabIndex = 1;
@@ -80,7 +67,7 @@
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Unispace", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.Transparent;
-            this.lblNombre.Location = new System.Drawing.Point(175, 173);
+            this.lblNombre.Location = new System.Drawing.Point(149, 158);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(63, 15);
             this.lblNombre.TabIndex = 2;
@@ -91,7 +78,7 @@
             this.lblDescripcion.AutoSize = true;
             this.lblDescripcion.Font = new System.Drawing.Font("Unispace", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescripcion.ForeColor = System.Drawing.Color.Transparent;
-            this.lblDescripcion.Location = new System.Drawing.Point(135, 199);
+            this.lblDescripcion.Location = new System.Drawing.Point(109, 184);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(103, 15);
             this.lblDescripcion.TabIndex = 3;
@@ -102,7 +89,7 @@
             this.lblImagen.AutoSize = true;
             this.lblImagen.Font = new System.Drawing.Font("Unispace", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblImagen.ForeColor = System.Drawing.Color.Transparent;
-            this.lblImagen.Location = new System.Drawing.Point(175, 225);
+            this.lblImagen.Location = new System.Drawing.Point(149, 210);
             this.lblImagen.Name = "lblImagen";
             this.lblImagen.Size = new System.Drawing.Size(63, 15);
             this.lblImagen.TabIndex = 4;
@@ -113,7 +100,7 @@
             this.lblPrecio.AutoSize = true;
             this.lblPrecio.Font = new System.Drawing.Font("Unispace", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPrecio.ForeColor = System.Drawing.Color.Transparent;
-            this.lblPrecio.Location = new System.Drawing.Point(175, 251);
+            this.lblPrecio.Location = new System.Drawing.Point(149, 236);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(63, 15);
             this.lblPrecio.TabIndex = 5;
@@ -124,7 +111,7 @@
             this.lblMarca.AutoSize = true;
             this.lblMarca.Font = new System.Drawing.Font("Unispace", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMarca.ForeColor = System.Drawing.Color.Transparent;
-            this.lblMarca.Location = new System.Drawing.Point(183, 277);
+            this.lblMarca.Location = new System.Drawing.Point(157, 262);
             this.lblMarca.Name = "lblMarca";
             this.lblMarca.Size = new System.Drawing.Size(55, 15);
             this.lblMarca.TabIndex = 6;
@@ -135,43 +122,36 @@
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Font = new System.Drawing.Font("Unispace", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategoria.ForeColor = System.Drawing.Color.Transparent;
-            this.lblCategoria.Location = new System.Drawing.Point(151, 304);
+            this.lblCategoria.Location = new System.Drawing.Point(125, 289);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Size = new System.Drawing.Size(87, 15);
             this.lblCategoria.TabIndex = 7;
             this.lblCategoria.Text = "Categoría:";
             // 
-            // txtId
-            // 
-            this.txtId.Location = new System.Drawing.Point(251, 119);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(121, 20);
-            this.txtId.TabIndex = 0;
-            // 
             // txtCodigo
             // 
-            this.txtCodigo.Location = new System.Drawing.Point(251, 145);
+            this.txtCodigo.Location = new System.Drawing.Point(225, 130);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(121, 20);
             this.txtCodigo.TabIndex = 1;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(251, 171);
+            this.txtNombre.Location = new System.Drawing.Point(225, 156);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(121, 20);
             this.txtNombre.TabIndex = 2;
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(251, 197);
+            this.txtDescripcion.Location = new System.Drawing.Point(225, 182);
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(121, 20);
             this.txtDescripcion.TabIndex = 3;
             // 
             // txtImagen
             // 
-            this.txtImagen.Location = new System.Drawing.Point(251, 223);
+            this.txtImagen.Location = new System.Drawing.Point(225, 208);
             this.txtImagen.Name = "txtImagen";
             this.txtImagen.Size = new System.Drawing.Size(121, 20);
             this.txtImagen.TabIndex = 4;
@@ -179,7 +159,7 @@
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(251, 249);
+            this.txtPrecio.Location = new System.Drawing.Point(225, 234);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(121, 20);
             this.txtPrecio.TabIndex = 5;
@@ -222,7 +202,7 @@
             // 
             this.cboMarca.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cboMarca.FormattingEnabled = true;
-            this.cboMarca.Location = new System.Drawing.Point(251, 275);
+            this.cboMarca.Location = new System.Drawing.Point(225, 260);
             this.cboMarca.Name = "cboMarca";
             this.cboMarca.Size = new System.Drawing.Size(121, 21);
             this.cboMarca.TabIndex = 6;
@@ -231,7 +211,7 @@
             // 
             this.cboCategoria.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cboCategoria.FormattingEnabled = true;
-            this.cboCategoria.Location = new System.Drawing.Point(251, 302);
+            this.cboCategoria.Location = new System.Drawing.Point(225, 287);
             this.cboCategoria.Name = "cboCategoria";
             this.cboCategoria.Size = new System.Drawing.Size(121, 21);
             this.cboCategoria.TabIndex = 7;
@@ -285,7 +265,6 @@
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.txtCodigo);
-            this.Controls.Add(this.txtId);
             this.Controls.Add(this.lblCategoria);
             this.Controls.Add(this.lblMarca);
             this.Controls.Add(this.lblPrecio);
@@ -293,7 +272,6 @@
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblCodigo);
-            this.Controls.Add(this.lblId);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmAltaArticulos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -308,8 +286,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.Label lblCodigo;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblDescripcion;
@@ -317,7 +293,6 @@
         private System.Windows.Forms.Label lblPrecio;
         private System.Windows.Forms.Label lblMarca;
         private System.Windows.Forms.Label lblCategoria;
-        private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtDescripcion;

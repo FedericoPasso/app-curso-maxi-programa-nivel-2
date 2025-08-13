@@ -10,12 +10,15 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using System.Configuration;//referencia del app config
 
 namespace presentacion
 {
     public partial class FrmAltaArticulos : Form
     {
         private Articulos articulos = null;
+        private OpenFileDialog archivo = null;
         public FrmAltaArticulos()
         {
             InitializeComponent();
@@ -45,7 +48,7 @@ namespace presentacion
                 {
                     articulos = new Articulos();
                 }
-                articulos.Id = int.Parse(txtId.Text);
+                //articulos.Id = int.Parse(txtId.Text);
                 articulos.Codigo = txtCodigo.Text;
                 articulos.Nombre = txtNombre.Text;
                 articulos.Descripcion = txtDescripcion.Text;
@@ -58,14 +61,16 @@ namespace presentacion
                 {
                     negocio.modificar(articulos);
                     MessageBox.Show("Modificado exitosamente");
-
-                }else
+                
+                }
+                else
                 {
                     negocio.agregar(articulos);
                     MessageBox.Show("Agregado exitosamente");
 
                 }
 
+                
 
                 Close();
             }
@@ -94,7 +99,7 @@ namespace presentacion
 
                 if(articulos != null)
                 {
-                    txtId.Text = articulos.Id.ToString();
+                    //txtId.Text = articulos.Id.ToString();
                     txtCodigo.Text = articulos.Codigo;
                     txtNombre.Text = articulos.Nombre;
                     txtDescripcion.Text = articulos.Descripcion;
@@ -141,5 +146,7 @@ namespace presentacion
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+        
     }
 }

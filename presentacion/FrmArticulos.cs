@@ -220,11 +220,52 @@ namespace presentacion
             }
         }
 
+        private bool validarFiltro() //validando los campos de la busqueda avanzada
+        {
+            if (cboCampo.SelectedIndex < 0)
+            {
+                MessageBox.Show("Por favor seleccione el campo a filtrar.");
+                return true;
+            }
+            if (cboCriterio.SelectedIndex < 0) 
+            {
+                MessageBox.Show("Por favor seleccione un criterio a filtrar.");
+                return true;
+            }
+            if(cboCampo.SelectedItem.ToString() == "Id")
+            {
+                if (!(soloNumeros(txtFiltroAvanzado.Text)))
+                {
+                    MessageBox.Show("Ingrese solo números");
+                    return true;
+                }
+            }
+            
+            return false;
+        }
+
+        private bool soloNumeros(string cadena)
+        {
+            foreach (char caracter in cadena)
+            {
+                if (!(char.IsNumber(caracter)))
+                {
+                    return false;
+                }
+            } 
+            return true;
+        }
+
         private void btnBuscar_Click_1(object sender, EventArgs e)
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
             try
             {
+                if (validarFiltro()) 
+                {
+                    return;
+                }
+
                 string campo = cboCampo.SelectedItem.ToString();
                 string criterio = cboCriterio.SelectedItem.ToString();  
                 string filtro = txtFiltroAvanzado.Text;
@@ -233,12 +274,18 @@ namespace presentacion
             }
             catch ( Exception ex)
             {
-                //if (cboCampo == "Id")
-                //{
-                //
-                //}
-                MessageBox.Show("Por favor complete todos los campos");
+               
+                MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            if(txtFiltroAvanzado.Text != "")
+            {
+                txtFiltroAvanzado.Clear();
+            }
+            cargar();
         }
     }    
 }
