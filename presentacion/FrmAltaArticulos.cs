@@ -81,7 +81,7 @@ namespace presentacion
             }
             catch (FormatException)
             {
-                MessageBox.Show("En el campo precio solo se permiten números");
+                MessageBox.Show("En el campo precio solo se permiten números", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
@@ -160,7 +160,7 @@ namespace presentacion
         {
             if (txtCodigo.Text == "" || txtNombre.Text == "" || txtPrecio.Text == "" || cboMarca.SelectedIndex == -1 || cboCategoria.SelectedIndex == -1)
             {
-                MessageBox.Show("Por favor complete los campos obligatorios(Código, Nombre, Precio, Marca, Categoría)");
+                MessageBox.Show("Por favor complete los campos obligatorios(Código, Nombre, Precio, Marca, Categoría)", "", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return true;
             }
 
