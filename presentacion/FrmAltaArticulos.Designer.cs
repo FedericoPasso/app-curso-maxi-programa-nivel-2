@@ -44,11 +44,12 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.cboMarca = new System.Windows.Forms.ComboBox();
             this.cboCategoria = new System.Windows.Forms.ComboBox();
-            this.pbxAltaArticulo = new System.Windows.Forms.PictureBox();
             this.barraTitulo = new System.Windows.Forms.Panel();
             this.lblEdit = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxAltaArticulo)).BeginInit();
+            this.pbxAltaArticulo = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.barraTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxAltaArticulo)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCodigo
@@ -216,15 +217,6 @@
             this.cboCategoria.Size = new System.Drawing.Size(121, 21);
             this.cboCategoria.TabIndex = 7;
             // 
-            // pbxAltaArticulo
-            // 
-            this.pbxAltaArticulo.Location = new System.Drawing.Point(395, 76);
-            this.pbxAltaArticulo.Name = "pbxAltaArticulo";
-            this.pbxAltaArticulo.Size = new System.Drawing.Size(357, 313);
-            this.pbxAltaArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbxAltaArticulo.TabIndex = 18;
-            this.pbxAltaArticulo.TabStop = false;
-            // 
             // barraTitulo
             // 
             this.barraTitulo.BackColor = System.Drawing.Color.DarkSlateGray;
@@ -248,12 +240,31 @@
             this.lblEdit.TabIndex = 0;
             this.lblEdit.Text = "AGREGAR O MODIFICAR";
             // 
+            // pbxAltaArticulo
+            // 
+            this.pbxAltaArticulo.Location = new System.Drawing.Point(395, 76);
+            this.pbxAltaArticulo.Name = "pbxAltaArticulo";
+            this.pbxAltaArticulo.Size = new System.Drawing.Size(357, 313);
+            this.pbxAltaArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxAltaArticulo.TabIndex = 18;
+            this.pbxAltaArticulo.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(353, 133);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 20;
+            this.label1.Text = "label1";
+            // 
             // FrmAltaArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(908, 558);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.barraTitulo);
             this.Controls.Add(this.pbxAltaArticulo);
             this.Controls.Add(this.cboCategoria);
@@ -277,9 +288,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FrmAltaProductos";
             this.Load += new System.EventHandler(this.FrmAltaArticulos_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pbxAltaArticulo)).EndInit();
             this.barraTitulo.ResumeLayout(false);
             this.barraTitulo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxAltaArticulo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -305,5 +316,6 @@
         private System.Windows.Forms.PictureBox pbxAltaArticulo;
         private System.Windows.Forms.Panel barraTitulo;
         private System.Windows.Forms.Label lblEdit;
+        private System.Windows.Forms.Label label1;
     }
 }

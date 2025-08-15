@@ -142,6 +142,14 @@ namespace presentacion
             }
         }
         
+        private void btnDetalles_Click(object sender, EventArgs e)
+        {
+            Articulos seleccionado;
+            seleccionado = (Articulos)dgvArticulos.CurrentRow.DataBoundItem;
+            FrmDetalles detalles = new FrmDetalles(seleccionado);
+            detalles.ShowDialog();
+            cargar();
+        }
        
         private void txtFiltrar_TextChanged(object sender, EventArgs e)
         {
@@ -149,7 +157,7 @@ namespace presentacion
             string filtro = txtFiltrar.Text;
             if (filtro.Length >= 3)
             {
-                listaFiltrada = listaArticulos.FindAll(x => x.Nombre.ToUpper().Contains(filtro.ToUpper()) || x.IdMarca.Descripcion.ToUpper().Contains(filtro.ToUpper()));//ciclo que funciona como un foreach para almacenar los datos filtrados
+                listaFiltrada = listaArticulos.FindAll(x => x.Nombre.ToUpper().Contains(filtro.ToUpper()) || x.IdMarca.Descripcion.ToUpper().Contains(filtro.ToUpper())|| x.IdCategoria.Descripcion.ToUpper().Contains(filtro.ToUpper()));//ciclo que funciona como un foreach para almacenar los datos filtrados
             }
             else
             {
@@ -287,5 +295,6 @@ namespace presentacion
             }
             cargar();
         }
+
     }    
 }

@@ -44,6 +44,11 @@ namespace presentacion
             
             try
             {
+
+                if (validarAgregarArticulo())
+                {
+                    return;
+                }
                 if(articulos == null)
                 {
                     articulos = new Articulos();
@@ -69,17 +74,20 @@ namespace presentacion
                     MessageBox.Show("Agregado exitosamente");
 
                 }
-
                 
 
+
                 Close();
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("En el campo precio solo se permiten números");
             }
             catch (Exception ex)
             {
 
                 MessageBox.Show(ex.ToString());
             }
-
         }
 
         private void FrmAltaArticulos_Load(object sender, EventArgs e)
@@ -99,7 +107,7 @@ namespace presentacion
 
                 if(articulos != null)
                 {
-                    //txtId.Text = articulos.Id.ToString();
+                    
                     txtCodigo.Text = articulos.Codigo;
                     txtNombre.Text = articulos.Nombre;
                     txtDescripcion.Text = articulos.Descripcion;
@@ -147,6 +155,19 @@ namespace presentacion
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        
+        //validacion para no agregar un objeto vacio
+        private bool validarAgregarArticulo()
+        {
+            if (txtCodigo.Text == "" || txtNombre.Text == "" || txtPrecio.Text == "" || cboMarca.SelectedIndex == -1 || cboCategoria.SelectedIndex == -1)
+            {
+                MessageBox.Show("Por favor complete los campos necesarios (Código, Nombre, Precio, Marca y Categoria)");
+                return true;
+            }
+
+
+            return false;
+        }
+
+       
     }
 }

@@ -65,6 +65,12 @@
     <Compile Include="FrmArticulos.Designer.cs">
       <DependentUpon>FrmArticulos.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmDetalles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDetalles.Designer.cs">
+      <DependentUpon>FrmDetalles.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmInicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmArticulos.resx">
       <DependentUpon>FrmArticulos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDetalles.resx">
+      <DependentUpon>FrmDetalles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmInicio.resx">
       <DependentUpon>FrmInicio.cs</DependentUpon>
@@ -135,6 +144,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Imagen de WhatsApp 2025-07-18 a las 13.41.19_e18133a0.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-arrow-left-flat-white-color-icon-left-back-west-vector-png-image_9756056.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

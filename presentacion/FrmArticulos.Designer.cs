@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.dgvArticulos = new System.Windows.Forms.DataGridView();
-            this.pbxArticulos = new System.Windows.Forms.PictureBox();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -45,6 +44,7 @@
             this.txtFiltroAvanzado = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnLimpiar = new System.Windows.Forms.Button();
+            this.pbxArticulos = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbxArticulos)).BeginInit();
             this.SuspendLayout();
@@ -66,16 +66,6 @@
             this.dgvArticulos.Size = new System.Drawing.Size(738, 480);
             this.dgvArticulos.TabIndex = 6;
             this.dgvArticulos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvArticulos_CellClick);
-            // 
-            // pbxArticulos
-            // 
-            this.pbxArticulos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pbxArticulos.Location = new System.Drawing.Point(756, 53);
-            this.pbxArticulos.Name = "pbxArticulos";
-            this.pbxArticulos.Size = new System.Drawing.Size(302, 304);
-            this.pbxArticulos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbxArticulos.TabIndex = 3;
-            this.pbxArticulos.TabStop = false;
             // 
             // btnAgregar
             // 
@@ -147,6 +137,7 @@
             this.btnDetalles.TabIndex = 5;
             this.btnDetalles.Text = "DETALLES";
             this.btnDetalles.UseVisualStyleBackColor = false;
+            this.btnDetalles.Click += new System.EventHandler(this.btnDetalles_Click);
             // 
             // lblFiltrar
             // 
@@ -278,6 +269,16 @@
             this.btnLimpiar.Text = "Limpiar";
             this.btnLimpiar.UseVisualStyleBackColor = false;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
+            // pbxArticulos
+            // 
+            this.pbxArticulos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pbxArticulos.Location = new System.Drawing.Point(756, 53);
+            this.pbxArticulos.Name = "pbxArticulos";
+            this.pbxArticulos.Size = new System.Drawing.Size(302, 304);
+            this.pbxArticulos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbxArticulos.TabIndex = 3;
+            this.pbxArticulos.TabStop = false;
             // 
             // FrmArticulos
             // 

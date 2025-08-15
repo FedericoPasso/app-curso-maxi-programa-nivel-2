@@ -113,6 +113,16 @@ namespace presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pngtree_arrow_left_flat_white_color_icon_left_back_west_vector_png_image_9756056 {
+            get {
+                object obj = ResourceManager.GetObject("pngtree-arrow-left-flat-white-color-icon-left-back-west-vector-png-image_9756056", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap res {
             get {
                 object obj = ResourceManager.GetObject("res", resourceCulture);
