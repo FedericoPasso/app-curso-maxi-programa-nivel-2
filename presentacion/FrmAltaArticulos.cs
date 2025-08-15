@@ -160,7 +160,7 @@ namespace presentacion
         {
             if (txtCodigo.Text == "" || txtNombre.Text == "" || txtPrecio.Text == "" || cboMarca.SelectedIndex == -1 || cboCategoria.SelectedIndex == -1)
             {
-                MessageBox.Show("Por favor complete los campos necesarios (Código, Nombre, Precio, Marca y Categoria)");
+                MessageBox.Show("Por favor complete los campos marcados con asteriscos.");
                 return true;
             }
 
